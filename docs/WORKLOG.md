@@ -11,6 +11,31 @@ the answer only has to be classified, not argued with.
 
 ## STATE OF THE BOARD, 2026-08-30 morning
 
+### 2026-10-06 AgentCard experiment 001 (fork only): sustained synthetic storage feed
+
+- **Scope:** new `sim/tb_agentcard_storage.vhd`, local-only runner
+  `sim/run_agentcard_storage.py`, and `docs/agentcard/` report/results. Upstream
+  RTL, historical entries, licenses, hardware and CI are unchanged.
+- **Baseline:** synthetic C reference PASS (0 failures, 4,178 arithmetic golden
+  vectors); original weight-streamer reassembly and fast/slow single/dual-clock
+  cadence tests complete. Official Debian GHDL 5.0.1 installed rootlessly.
+- **Result:** 12 sustained cases, lossless and bit-exact across all 2,953 groups
+  per case. Shared 9/3/1-bank feed is exactly 1/3, 1/9, 1/27 group/cycle. At a
+  synthetic 128-cycle request delay, 32 to 256 FIFO beats/lane raises feed from
+  0.2148 to 1 group/cycle with sufficient outstanding requests; restricting the
+  256-beat case to one outstanding request gives only 0.1103 group/cycle.
+- **Validation:** per-lane conservation, queue/occupancy bounds, burst boundaries,
+  analytical service ceilings, complete warmup/measurement/drain, five detected
+  data mutations with unchecked attribution controls, and independent review.
+  Measurement contains fresh reads and ends before every lane's final read.
+- **Boundary:** 864-byte / 1,536-weight synthetic group feed, not executed MACs,
+  LLM tokens/s, physical flash/NVMe throughput, or 120B+ model feasibility.
+  See `docs/agentcard/storage-experiment-001.md` for assumptions and reproduction.
+- **Next decision:** choose an explicit device concurrency/latency model and
+  representative expert access/reuse trace before drawing a card memory budget.
+  This entry does not launch any additional task or adopt the upstream backlog.
+
+
 ### 2026-10-01 FMAX + 27B FIT (main session): c_kv clears 200 on VU35P -2; the 27B fits the VU35P at 46% LUT
 
 - **c_kv to 200 (006edac).** `attn_kv_axi`'s read limit `(lim_rec+1)*CPR` mapped

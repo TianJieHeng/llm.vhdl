@@ -1,0 +1,75 @@
+AgentCard experiment 001 local verification, 2026-10-06 UTC
+No CI or hardware was used. Final code rerun; all numeric rows equal the preceding complete run.
+Python optimized mode (-O) is explicitly rejected; refusal checked.
+
+Upstream baseline completion excerpts:
+  A  generated arith vs golden vectors           PASS (4178 checked)
+OK (0 failures)
+sim/tb_weight_streamer.vhd:787:5:@725ns:(report note): weight_streamer: 0 reassembly errors across both geometries
+sim/tb_weight_streamer.vhd:790:5:@725ns:(report note): weight_streamer CADENCE (cycles spanned by 21 accepts, weight/scale): dual slow 30/29  dual fast 20/20  single slow 30/29  single fast 20/20
+
+Sustained case and oracle-control completion excerpts:
+[independent_fast]
+sim/tb_agentcard_storage.vhd:256:9:@25845ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=108 end_inventory=108 min_inventory=108 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=1593 response_stalls=0 ar_stalls=0 first_cycle=532 last_cycle=2579
+sim/tb_agentcard_storage.vhd:272:9:@29775ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=20 warm_end_cycle=531 final_cycle=2972 last_read_cycle=2968
+[shared_9_banks]
+sim/tb_agentcard_storage.vhd:256:9:@77045ns:(report note): MEASURE cycles=6144 groups=2048 input_beats=55296 demand_cycles=6144 starved_cycles=4096 start_inventory=36 end_inventory=36 min_inventory=36 peak_inventory=54 sum_inventory=276480 peak_lane=2 peak_inflight=1683 response_stalls=0 ar_stalls=0 first_cycle=1556 last_cycle=7699
+sim/tb_agentcard_storage.vhd:272:9:@88835ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=22 warm_end_cycle=1555 final_cycle=8878 last_read_cycle=8874
+[shared_3_banks]
+sim/tb_agentcard_storage.vhd:256:9:@230645ns:(report note): MEASURE cycles=18432 groups=2048 input_beats=55296 demand_cycles=18432 starved_cycles=16384 start_inventory=12 end_inventory=12 min_inventory=12 peak_inventory=36 sum_inventory=442368 peak_lane=2 peak_inflight=1713 response_stalls=0 ar_stalls=0 first_cycle=4628 last_cycle=23059
+sim/tb_agentcard_storage.vhd:272:9:@266015ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=28 warm_end_cycle=4627 final_cycle=26596 last_read_cycle=26592
+[shared_1_bank]
+sim/tb_agentcard_storage.vhd:256:9:@691445ns:(report note): MEASURE cycles=55296 groups=2048 input_beats=55296 demand_cycles=55296 starved_cycles=53248 start_inventory=4 end_inventory=4 min_inventory=4 peak_inventory=30 sum_inventory=940032 peak_lane=2 peak_inflight=1723 response_stalls=0 ar_stalls=0 first_cycle=13844 last_cycle=69139
+sim/tb_agentcard_storage.vhd:272:9:@797555ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=46 warm_end_cycle=13843 final_cycle=79750 last_read_cycle=79746
+[bandwidth_quarter]
+sim/tb_agentcard_storage.vhd:256:9:@102615ns:(report note): MEASURE cycles=8192 groups=2048 input_beats=55296 demand_cycles=8192 starved_cycles=6144 start_inventory=27 end_inventory=27 min_inventory=27 peak_inventory=27 sum_inventory=221184 peak_lane=1 peak_inflight=1701 response_stalls=0 ar_stalls=0 first_cycle=2065 last_cycle=10256
+sim/tb_agentcard_storage.vhd:272:9:@118335ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=20 warm_end_cycle=2064 final_cycle=11828 last_read_cycle=11824
+[latency_small_buffer]
+sim/tb_agentcard_storage.vhd:256:9:@119475ns:(report note): MEASURE cycles=9536 groups=2048 input_beats=55296 demand_cycles=9536 starved_cycles=7488 start_inventory=0 end_inventory=0 min_inventory=0 peak_inventory=84 sum_inventory=172032 peak_lane=4 peak_inflight=864 response_stalls=0 ar_stalls=0 first_cycle=2407 last_cycle=11942
+sim/tb_agentcard_storage.vhd:272:9:@138505ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=140 warm_end_cycle=2406 final_cycle=13845 last_read_cycle=13842
+[latency_large_buffer]
+sim/tb_agentcard_storage.vhd:256:9:@27045ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=108 end_inventory=108 min_inventory=108 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=6777 response_stalls=0 ar_stalls=0 first_cycle=652 last_cycle=2699
+sim/tb_agentcard_storage.vhd:272:9:@30975ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=140 warm_end_cycle=651 final_cycle=3092 last_read_cycle=3088
+[latency_large_buffer_one_outstanding]
+sim/tb_agentcard_storage.vhd:256:9:@232155ns:(report note): MEASURE cycles=18560 groups=2048 input_beats=55296 demand_cycles=18560 starved_cycles=16512 start_inventory=0 end_inventory=0 min_inventory=0 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=432 response_stalls=0 ar_stalls=0 first_cycle=4651 last_cycle=23210
+sim/tb_agentcard_storage.vhd:272:9:@268335ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=140 warm_end_cycle=4650 final_cycle=26828 last_read_cycle=26824
+[page_skew_small_buffer]
+sim/tb_agentcard_storage.vhd:256:9:@83705ns:(report note): MEASURE cycles=6672 groups=2048 input_beats=55296 demand_cycles=6672 starved_cycles=4624 start_inventory=0 end_inventory=0 min_inventory=0 peak_inventory=493 sum_inventory=983808 peak_lane=32 peak_inflight=864 response_stalls=0 ar_stalls=0 first_cycle=1694 last_cycle=8365
+sim/tb_agentcard_storage.vhd:272:9:@97645ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=168 warm_end_cycle=1693 final_cycle=9759 last_read_cycle=9756
+[page_skew_large_buffer]
+sim/tb_agentcard_storage.vhd:256:9:@27325ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=507 end_inventory=507 min_inventory=507 peak_inventory=507 sum_inventory=1038336 peak_lane=32 peak_inflight=6378 response_stalls=0 ar_stalls=0 first_cycle=680 last_cycle=2727
+sim/tb_agentcard_storage.vhd:272:9:@31255ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=168 warm_end_cycle=679 final_cycle=3120 last_read_cycle=3116
+[consumer_pauses]
+sim/tb_agentcard_storage.vhd:256:9:@75235ns:(report note): MEASURE cycles=6016 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=1296 end_inventory=1296 min_inventory=1167 peak_inventory=1728 sum_inventory=8348160 peak_lane=64 peak_inflight=432 response_stalls=0 ar_stalls=0 first_cycle=1503 last_cycle=7518
+sim/tb_agentcard_storage.vhd:272:9:@86295ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=80 warm_end_cycle=1502 final_cycle=8624 last_read_cycle=8433
+[burst_8]
+sim/tb_agentcard_storage.vhd:256:9:@26085ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=108 end_inventory=108 min_inventory=108 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=1593 response_stalls=0 ar_stalls=0 first_cycle=556 last_cycle=2603
+sim/tb_agentcard_storage.vhd:272:9:@30015ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=44 warm_end_cycle=555 final_cycle=2996 last_read_cycle=2992
+[mutation_1_checked]
+sim/tb_agentcard_storage.vhd:222:15:@5745ns:(assertion failure): weight mismatch group=549 row=14
+[mutation_1_unchecked]
+sim/tb_agentcard_storage.vhd:256:9:@25845ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=108 end_inventory=108 min_inventory=108 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=1593 response_stalls=0 ar_stalls=0 first_cycle=532 last_cycle=2579
+sim/tb_agentcard_storage.vhd:272:9:@29775ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=20 warm_end_cycle=531 final_cycle=2972 last_read_cycle=2968
+[mutation_2_checked]
+sim/tb_agentcard_storage.vhd:222:15:@5745ns:(assertion failure): weight mismatch group=549 row=0
+[mutation_2_unchecked]
+sim/tb_agentcard_storage.vhd:256:9:@25845ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=108 end_inventory=108 min_inventory=108 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=1593 response_stalls=0 ar_stalls=0 first_cycle=532 last_cycle=2579
+sim/tb_agentcard_storage.vhd:272:9:@29775ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=20 warm_end_cycle=531 final_cycle=2972 last_read_cycle=2968
+[mutation_3_checked]
+sim/tb_agentcard_storage.vhd:225:13:@5745ns:(assertion failure): scale mismatch group=549 row=21
+[mutation_3_unchecked]
+sim/tb_agentcard_storage.vhd:256:9:@25845ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=108 end_inventory=108 min_inventory=108 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=1593 response_stalls=0 ar_stalls=0 first_cycle=532 last_cycle=2579
+sim/tb_agentcard_storage.vhd:272:9:@29775ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=20 warm_end_cycle=531 final_cycle=2972 last_read_cycle=2968
+[mutation_4_checked]
+sim/tb_agentcard_storage.vhd:222:15:@5745ns:(assertion failure): weight mismatch group=549 row=0
+[mutation_4_unchecked]
+sim/tb_agentcard_storage.vhd:256:9:@25845ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=108 end_inventory=108 min_inventory=108 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=1593 response_stalls=0 ar_stalls=0 first_cycle=532 last_cycle=2579
+sim/tb_agentcard_storage.vhd:272:9:@29775ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=20 warm_end_cycle=531 final_cycle=2972 last_read_cycle=2968
+[mutation_5_checked]
+sim/tb_agentcard_storage.vhd:222:15:@5745ns:(assertion failure): weight mismatch group=549 row=0
+[mutation_5_unchecked]
+sim/tb_agentcard_storage.vhd:256:9:@25845ns:(report note): MEASURE cycles=2048 groups=2048 input_beats=55296 demand_cycles=2048 starved_cycles=0 start_inventory=108 end_inventory=108 min_inventory=108 peak_inventory=108 sum_inventory=221184 peak_lane=4 peak_inflight=1593 response_stalls=0 ar_stalls=0 first_cycle=532 last_cycle=2579
+sim/tb_agentcard_storage.vhd:272:9:@29775ns:(report note): PASS agentcard_storage total_groups=2953 total_beats=79731 first_group_cycle=20 warm_end_cycle=531 final_cycle=2972 last_read_cycle=2968
+
+Final runner verdict:
+PASS: 12 sustained cases, 5 attributed data-oracle mutations, both upstream baselines
