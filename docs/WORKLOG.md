@@ -11,6 +11,40 @@ the answer only has to be classified, not argued with.
 
 ## STATE OF THE BOARD, 2026-08-30 morning
 
+### 2026-10-06 AgentCard experiment 003 (fork only): coordinated history and causal reuse
+
+- **Scope:** a separate standard-library policy layer over the unchanged 002
+  kernel, independent tests/auditor, deterministic results and report. No RTL,
+  model inference/downloads, remote compute, hardware, dependencies or CI runs.
+- **Controlled budget:** all nine cases keep 8 GiB combined expert/KV cache and
+  one 256 GB/s fast bus. 32 synthetic tokens/case, 8 warmup and 24 measured. The
+  phase/churn route shift occurs at token 19, off the fixed cache-reset boundary.
+- **Lossless result:** windowed reuse regresses. Disjoint service rises 66.122
+  to 67.908 ms as expert byte hits fall 49.89% to 44.68%. Phase/churn rises 74.270
+  to 82.625 ms; expert and KV hit rates both decline. This rejects this policy
+  on these fixtures, not every causal cache design.
+- **Lossy result:** a 64 MiB per-attention-layer union cap serves 12.5% of requested
+  KV bytes; worst-query coverage is 6.25%. It omits 5.25 GiB/token and preserves
+  every explicit synthetic required anchor. Disjoint service falls to 24.377 ms,
+  phase/churn to 32.209 ms, but the latter has a 65.498 ms route-shift token.
+  Cache-aware score ties provide no traffic/timing gain on this fixture.
+- **Fallback:** an infeasible 1 MiB cap returns the full requested union, exactly
+  reproducing the 66.122 ms baseline and all 24 measured necessary 50 ms misses.
+  If a full stage cannot fit cache, the simulator refuses before allocation.
+- **Validation:** 93 tests, separate simulator-free audit of all nine cache,
+  coverage and resource outcomes, independent substantive review, two exact
+  JSON/CSV/manifest reproductions, source hash guards and zero pending drain.
+  Native-full necessary 50 ms breaches are 17/24, not 24/24. Every measured token
+  in every case exceeds 20 ms under the unchanged off-chip-state placement.
+- **Boundary:** fixture scores/required flags and coverage are not semantic
+  quality, reasoning preservation or achieved tokens/s. 32 tokens do not
+  establish production tails. The 16 GiB card ceiling remains an assumption,
+  separate from the user's 16 GB host goal. No broader experiment was launched.
+- **Outcome:** see `docs/agentcard/storage-experiment-003.md`. Real causal traces,
+  quality evaluations and device-specific placement are later evidence needs;
+  this scoped experiment ends after publication and verification.
+
+
 ### 2026-10-06 AgentCard experiment 002 (fork only): coupled causal expert/KV storage
 
 - **Scope:** new standard-library Python page-service/replay kernel, strict

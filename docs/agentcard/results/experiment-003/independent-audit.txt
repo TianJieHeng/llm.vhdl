@@ -1,0 +1,11 @@
+PASS native_full_lru independent cache/coverage/physical resources
+PASS disjoint_union_lru independent cache/coverage/physical resources
+PASS disjoint_union_reuse independent cache/coverage/physical resources
+PASS disjoint_cap_lru independent cache/coverage/physical resources
+PASS phase_churn_union_lru independent cache/coverage/physical resources
+PASS phase_churn_union_reuse independent cache/coverage/physical resources
+PASS phase_churn_cap_lru independent cache/coverage/physical resources
+PASS phase_churn_cap_cached independent cache/coverage/physical resources
+PASS disjoint_overflow_fallback independent cache/coverage/physical resources
+PASS all 9 cases; exact fallback schedule; native summary-only schedule delta
+results_sha256=fd0480574682864593e2e41d7d285fe2de9d99f49a7672da84a8f849db1651f0

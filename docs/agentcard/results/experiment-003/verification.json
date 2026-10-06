@@ -1,0 +1,60 @@
+{
+  "artifact_sha256": {
+    "independent-audit.txt": "88320d4df5f474e12d2009e6e2b61109b86fab485a71d2be990b49467b6c990e",
+    "manifest.json": "18b1f05f225a0d40e3c371af9cda433bd540994a6de9f5cfbde8250d33da78f8",
+    "results.json": "fd0480574682864593e2e41d7d285fe2de9d99f49a7672da84a8f849db1651f0",
+    "summary.csv": "c54b9d1d19a198de0d98e97c53525807a4dd27e32ee5dd72966615c80aef2856"
+  },
+  "base_git_sha": "29ae898f86e5e03b5cd88937c92930008bbb1e7e",
+  "independent_review": {
+    "audit_command": "python3 sim/audit_agentcard_policies.py docs/agentcard/results/experiment-003/results.json",
+    "audit_source_sha256": "45f2e9aa02e868cc50f606db14f3f957e35122c7d86082cabe291261fb44a2c3",
+    "audited_cases": 9,
+    "method": "Independent heap cache and closed-form fixture selection; imports no simulator code; reconstructs cache counters, physical traffic, per-query coverage, channel/die/fast resource bounds; schedule checked by full-fallback identity and native summary-only delta, not independent event reconstruction",
+    "result": "PASS, no blocking accounting/causality/input/interpretation defects"
+  },
+  "invariants": {
+    "all_216_measured_tokens_per_run_over_20ms_resource_bound": true,
+    "all_native_top8_expert_requests_retained": true,
+    "all_required_fixture_pages_retained": true,
+    "all_source_hashes_unchanged": true,
+    "full_fallback_exact_union_schedule": true,
+    "lossless_union_lru_legacy_identity_test": true,
+    "unchanged_experiment002_sources_and_artifacts": true,
+    "zero_pending_pages_all_cases": true,
+    "zero_starved_queries": true
+  },
+  "negative_controls": {
+    "optimized_python_rejected": true,
+    "tests": "Explicit omitted-byte/page/block/score mutations, required-page loss, unfair selection, physical-cap violation, false fallback, candidate/query mismatch, invalid/nonfinite inputs and cache-capacity failure; unchecked attribution controls"
+  },
+  "reproduction": {
+    "byte_identical": [
+      "results.json",
+      "manifest.json",
+      "summary.csv"
+    ],
+    "cases_per_run": 9,
+    "measured_tokens": 24,
+    "note": "Runs partially overlapped; these are simulator host costs, not hardware or model performance",
+    "runs": [
+      {
+        "peak_rss_kib": 474044,
+        "wall_seconds": 775.639
+      },
+      {
+        "peak_rss_kib": 474004,
+        "wall_seconds": 760.84
+      }
+    ],
+    "tokens_per_case": 32,
+    "warmup_tokens": 8
+  },
+  "scope": "Synthetic fixtures and assumed storage placement only; no trained attention, reasoning-quality evaluation, model download, hardware operation, remote compute or CI run",
+  "tests": {
+    "command": "python3 -m unittest discover -s sim -p 'test_agentcard_*.py' -v",
+    "experiment002_existing": 53,
+    "experiment003_new": 40,
+    "passed": 93
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "base_git_sha": "29ae898f86e5e03b5cd88937c92930008bbb1e7e",
+  "cases": {
+    "disjoint_cap_lru": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "lru",
+      "candidate_sha256": "e8b399e1281c2b6142990569ad82b5d649bc31a52834dea05ca5c0215d7fd3ac",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "disjoint",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": false,
+        "cap_bytes": 67108864,
+        "min_blocks_per_query": 8,
+        "mode": "capped"
+      },
+      "tokens": 32,
+      "trace_sha256": "2f252313f133decc7d325d7500a68f6f729f21e2ad2f81313958b3e495b2d687",
+      "warmup_tokens": 8
+    },
+    "disjoint_overflow_fallback": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "lru",
+      "candidate_sha256": "e8b399e1281c2b6142990569ad82b5d649bc31a52834dea05ca5c0215d7fd3ac",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "disjoint",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": false,
+        "cap_bytes": 1048576,
+        "min_blocks_per_query": 8,
+        "mode": "capped"
+      },
+      "tokens": 32,
+      "trace_sha256": "2f252313f133decc7d325d7500a68f6f729f21e2ad2f81313958b3e495b2d687",
+      "warmup_tokens": 8
+    },
+    "disjoint_union_lru": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "lru",
+      "candidate_sha256": "e8b399e1281c2b6142990569ad82b5d649bc31a52834dea05ca5c0215d7fd3ac",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "disjoint",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": false,
+        "cap_bytes": 67108864,
+        "min_blocks_per_query": 8,
+        "mode": "union"
+      },
+      "tokens": 32,
+      "trace_sha256": "2f252313f133decc7d325d7500a68f6f729f21e2ad2f81313958b3e495b2d687",
+      "warmup_tokens": 8
+    },
+    "disjoint_union_reuse": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "windowed_reuse",
+      "candidate_sha256": "e8b399e1281c2b6142990569ad82b5d649bc31a52834dea05ca5c0215d7fd3ac",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "disjoint",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": false,
+        "cap_bytes": 67108864,
+        "min_blocks_per_query": 8,
+        "mode": "union"
+      },
+      "tokens": 32,
+      "trace_sha256": "2f252313f133decc7d325d7500a68f6f729f21e2ad2f81313958b3e495b2d687",
+      "warmup_tokens": 8
+    },
+    "native_full_lru": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "lru",
+      "candidate_sha256": "1adca5c1f511b3ecfed5511dc9e53af5e4fbfab362016e1a961f743665355186",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "native_full",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": false,
+        "cap_bytes": 67108864,
+        "min_blocks_per_query": 8,
+        "mode": "union"
+      },
+      "tokens": 32,
+      "trace_sha256": "568ba05baf9b53e24745f592f6e38bcdcafe1d50b420b9ccbc47ee53f6ebde3d",
+      "warmup_tokens": 8
+    },
+    "phase_churn_cap_cached": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "lru",
+      "candidate_sha256": "ee47b7664e569441df869523c718f579507a0560a173473fbc4e4cd3d1a13205",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "phase_churn",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": true,
+        "cap_bytes": 67108864,
+        "min_blocks_per_query": 8,
+        "mode": "capped"
+      },
+      "tokens": 32,
+      "trace_sha256": "54c684eeaa0d2bcbe41e2324fb6ee229ecdb9ed6dca547226403b09e3e929b5c",
+      "warmup_tokens": 8
+    },
+    "phase_churn_cap_lru": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "lru",
+      "candidate_sha256": "ee47b7664e569441df869523c718f579507a0560a173473fbc4e4cd3d1a13205",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "phase_churn",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": false,
+        "cap_bytes": 67108864,
+        "min_blocks_per_query": 8,
+        "mode": "capped"
+      },
+      "tokens": 32,
+      "trace_sha256": "54c684eeaa0d2bcbe41e2324fb6ee229ecdb9ed6dca547226403b09e3e929b5c",
+      "warmup_tokens": 8
+    },
+    "phase_churn_union_lru": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "lru",
+      "candidate_sha256": "ee47b7664e569441df869523c718f579507a0560a173473fbc4e4cd3d1a13205",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "phase_churn",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": false,
+        "cap_bytes": 67108864,
+        "min_blocks_per_query": 8,
+        "mode": "union"
+      },
+      "tokens": 32,
+      "trace_sha256": "54c684eeaa0d2bcbe41e2324fb6ee229ecdb9ed6dca547226403b09e3e929b5c",
+      "warmup_tokens": 8
+    },
+    "phase_churn_union_reuse": {
+      "assumed_card_bytes": 17179869184,
+      "cache_bytes": 8589934592,
+      "cache_policy": "windowed_reuse",
+      "candidate_sha256": "ee47b7664e569441df869523c718f579507a0560a173473fbc4e4cd3d1a13205",
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "fixture": "phase_churn",
+      "seed": 20261006,
+      "selection_policy": {
+        "cache_tiebreak": false,
+        "cap_bytes": 67108864,
+        "min_blocks_per_query": 8,
+        "mode": "union"
+      },
+      "tokens": 32,
+      "trace_sha256": "54c684eeaa0d2bcbe41e2324fb6ee229ecdb9ed6dca547226403b09e3e929b5c",
+      "warmup_tokens": 8
+    }
+  },
+  "negative_fixtures": {
+    "interpretation": "Full union fallback preserves supplied requests, may exceed the deadline, and never claims reasoning preservation from fixture coverage",
+    "mandatory_overflow": {
+      "cap_bytes": 16384,
+      "fallback": true,
+      "requested_blocks": 64,
+      "requested_physical_bytes": 8388608,
+      "served_blocks": 64
+    }
+  },
+  "placement_sensitivity": {
+    "note": "Analytical zero-KV/no-fill bounds only. Moving state on chip changes placement; no case does so. Weight-only floor leaves about0.195ms of20ms for everything else.",
+    "offchip_state_rw_bytes": 309067776,
+    "weight_only_bytes": 5070248640,
+    "weight_only_ms_at256": 19.80565875,
+    "with_state_ms_at256": 21.01295475
+  },
+  "python": "3.12.14",
+  "schema_version": 3,
+  "scope": "synthetic policy/storage replay; omission and score coverage are not quality; timings are not achieved tokens/s",
+  "source_sha256": {
+    "sim/agentcard_coupled.py": "94e04d3801a19bd1985052d0b160a7af1b05b89e8f72dd8fbd3c5aac5ceb7289",
+    "sim/agentcard_policies.py": "751192ec220000cbb767c4b5e334f11d1057bac8c35729fb7f1cbc405113aee7",
+    "sim/run_agentcard_coupled.py": "49bd34a7514f5b7bfa155f969e8333c147020c7d92e8178dba5e96683fee3bce",
+    "sim/run_agentcard_policies.py": "04b61a255fbbecff63160e6664631806af0e35491a4b394747edbe6da3cfbcf1",
+    "sim/test_agentcard_coupled.py": "cb9e95cd455ab4ce72dd18b4cbd7f78664813208e39e9473ad49c80bc3a38509",
+    "sim/test_agentcard_policies.py": "11468241ade12496367ed9ac163c017fbe0e64d2e485fc18256f9c2ca457087c",
+    "sim/test_agentcard_replay.py": "18663f9e436187412595ff881317741d871dc52e664a6898651df7d1a4d5cdbb"
+  },
+  "unchanged_fast_placement_floor_bytes": 5379316416
+}
