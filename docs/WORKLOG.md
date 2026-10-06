@@ -11,6 +11,35 @@ the answer only has to be classified, not argued with.
 
 ## STATE OF THE BOARD, 2026-08-30 morning
 
+### 2026-10-06 AgentCard experiment 002 (fork only): coupled causal expert/KV storage
+
+- **Scope:** new standard-library Python page-service/replay kernel, strict
+  synthetic/real-trace interface, fixtures, tests and `docs/agentcard/` results.
+  No RTL/application changes, CI, model downloads, remote compute or hardware.
+- **Model:** native 48-layer/top-8 routing, audited Qwen3.5-122B-A10B geometry,
+  shared expert/KV cache, physical channel command/data buses, serialized die
+  array reads, plane buffers, bounded bridge, retry transfers and one shared
+  fast-memory bus. Routes are available only after layer attention dependencies.
+- **Result:** 12 deterministic assumed-envelope cases. Selected shared pages
+  give 27.913 ms mean serialized service; disjoint grouped-query selections
+  expand to full history, reduce expert byte hits from 88.61% to 49.80% and
+  give 66.242 ms. The native-full case's resource bound exceeds 50 ms in all
+  four measured tokens for this 8 GiB-cache/256 GB/s placement. This is not a
+  rejection of every 16 GiB-card design or evidence of real-model locality.
+- **Validation:** 53 tests, independent hand-timed oracles and audit, strict
+  byte/resource/cache conservation, explicit warmup and zero pending drain;
+  two exact result reproductions. Four-token p95/p99 are sample maxima, not
+  production-tail estimates. Simulator peak RSS about 101 MiB; no weight arrays.
+- **Boundary:** zero unspecified compute, immutable KV snapshot, whole-stage
+  pinning and no prefetch. Scheduled service differs from conditional necessary
+  resource bounds. Off-chip state placement is explicit; selected attention
+  changes semantics and has no quality validation. The assumed 16 GiB card
+  budget is separate from the user's 16 GB host target, not an approved BOM.
+- **Next evidence:** real causal route/attention traces and device-specific
+  state/cache/streaming placement, before hardware spending. See
+  `docs/agentcard/storage-experiment-002.md`. No upstream backlog was launched.
+
+
 ### 2026-10-06 AgentCard experiment 001 (fork only): sustained synthetic storage feed
 
 - **Scope:** new `sim/tb_agentcard_storage.vhd`, local-only runner

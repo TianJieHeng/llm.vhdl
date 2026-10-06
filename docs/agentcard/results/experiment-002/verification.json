@@ -1,0 +1,43 @@
+{
+  "checker_controls": "Corrupted counters and overlapping resource records rejected; controls pass",
+  "ci": "not run; no workflows changed",
+  "commands": [
+    "python3 -m unittest discover -s sim -p test_agentcard_*.py -v",
+    "python3 sim/run_agentcard_coupled.py --out <outside-repo-output>",
+    "python3 sim/run_agentcard_coupled.py --trace sim/fixtures/agentcard/trace-v1-example.json --warmup-tokens 1 --out <outside-repo-output>",
+    "python3 -O sim/run_agentcard_coupled.py --out <outside-repo-output> # expected failure"
+  ],
+  "compared_files": [
+    "results.json",
+    "summary.csv",
+    "manifest.json"
+  ],
+  "date_utc": "2026-10-06",
+  "deterministic_runs": 2,
+  "example_import": "PASS: two synthetic native tokens, warmup=1",
+  "hardware": "not run",
+  "independent_budget_reconstruction": "Exact across all 12 cases",
+  "independent_review": "PASS: kernel, replay, geometry, resource/byte accounting, causality, docs and results",
+  "optimized_python": "Rejected as required: assertions disabled",
+  "output_sha256": {
+    "manifest.json": "7b8a992efab8791bd07ae22f7390f76556f3685be7cff94c2b6b23acd190327f",
+    "results.json": "d62c7cfdd5b41c19c6ce1aeacefe10ce61ca5a8db471cb393980658aa8e4147f",
+    "summary.csv": "9ca5bde1211a6873b5f0c4526df0e9161c584ab0ac1f7dfd0f3ebcacf34f3b97"
+  },
+  "rtl": "unchanged; unrelated RTL suite not rerun",
+  "run_observations": [
+    {
+      "exit_code": 0,
+      "peak_rss_kib": 103380,
+      "wall_seconds": 117.82507838100719
+    },
+    {
+      "exit_code": 0,
+      "peak_rss_kib": 103280,
+      "wall_seconds": 116.06922995699279
+    }
+  ],
+  "source_mutation_guard": "Source hashes taken before run and checked unchanged after completion",
+  "status": "PASS",
+  "unit_tests": 53
+}

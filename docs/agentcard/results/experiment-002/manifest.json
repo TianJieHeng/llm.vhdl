@@ -1,0 +1,305 @@
+{
+  "base_git_sha": "52cbfc7b2a6c01302d806da8337117c17a2440f9",
+  "cases": {
+    "expert_only_hot_8g": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "attention": "none_control",
+        "tokens": 6
+      },
+      "trace_sha256": "3b59c2a7d6e4fae7a0fcc24a842769c26ba7c7c7ed9f019386a5046672b060ff"
+    },
+    "native_full_attention_8g": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "attention": "full",
+        "tokens": 6
+      },
+      "trace_sha256": "972d77c59ecda066e8872d48373b696dbe77de4727c4cf47d3ca2e189949cb30"
+    },
+    "selected_churn_8channels": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 8,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "kv_locality": "churn",
+        "tokens": 6
+      },
+      "trace_sha256": "df8f0feeeae192a2d086456d6e4165be6078238207c73a781532323a1b02a95d"
+    },
+    "selected_churn_8g": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "kv_locality": "churn",
+        "tokens": 6
+      },
+      "trace_sha256": "df8f0feeeae192a2d086456d6e4165be6078238207c73a781532323a1b02a95d"
+    },
+    "selected_churn_repo_padded": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "repo_padded",
+      "trace_parameters": {
+        "kv_locality": "churn",
+        "tokens": 6
+      },
+      "trace_sha256": "df8f0feeeae192a2d086456d6e4165be6078238207c73a781532323a1b02a95d"
+    },
+    "selected_disjoint_heads_8g": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "query_overlap": "disjoint",
+        "tokens": 6
+      },
+      "trace_sha256": "53efc8ad632c8508e6bf8c13f7b5e1fbd7d1d91d952c0ed0f7863b215d77f84c"
+    },
+    "selected_hot_1m_context": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "context_tokens": 1010000,
+        "tokens": 6
+      },
+      "trace_sha256": "87098f8a4ddb982b1592a2399ac89677e02e22eb97caf2a81119f197c20a7d77"
+    },
+    "selected_hot_4g": {
+      "cache_gib": 4,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "tokens": 6
+      },
+      "trace_sha256": "e4c71af3fbfae339b95280f242848371c2be3308ff7182624bd2bc634225fb13"
+    },
+    "selected_hot_8g": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "tokens": 6
+      },
+      "trace_sha256": "e4c71af3fbfae339b95280f242848371c2be3308ff7182624bd2bc634225fb13"
+    },
+    "selected_hot_fast128": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 128,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "tokens": 6
+      },
+      "trace_sha256": "e4c71af3fbfae339b95280f242848371c2be3308ff7182624bd2bc634225fb13"
+    },
+    "selected_shift_routes_8g": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "routes": "shift",
+        "tokens": 6
+      },
+      "trace_sha256": "ceafb30d3da87ae67ae1f26767bcb78805208f70b088d7a6fc41041a174ae218"
+    },
+    "selected_uniform_routes_8g": {
+      "cache_gib": 8,
+      "card_gib": 16,
+      "device": {
+        "bridge_pages": 32,
+        "channel_bytes_per_ns": 2,
+        "channels": 32,
+        "command_ns": 100,
+        "dies_per_channel": 8,
+        "fast_bytes_per_ns": 256,
+        "page_bytes": 16384,
+        "planes_per_die": 2,
+        "read_ns": 40000,
+        "retry_every": 0,
+        "retry_ns": 40000,
+        "shared_command_data_bus": true
+      },
+      "format": "compact",
+      "trace_parameters": {
+        "routes": "uniform",
+        "tokens": 6
+      },
+      "trace_sha256": "4a634124dc6604621ac052dc941da486e9b59f8722032f83f4bb15194a313483"
+    }
+  },
+  "python": "3.12.14",
+  "schema_version": 1,
+  "scope": "synthetic storage-only stage-barrier replay; not physical throughput, real routing locality, quality, or achieved tokens/s",
+  "source_sha256": {
+    "sim/agentcard_coupled.py": "94e04d3801a19bd1985052d0b160a7af1b05b89e8f72dd8fbd3c5aac5ceb7289",
+    "sim/run_agentcard_coupled.py": "49bd34a7514f5b7bfa155f969e8333c147020c7d92e8178dba5e96683fee3bce",
+    "sim/test_agentcard_coupled.py": "cb9e95cd455ab4ce72dd18b4cbd7f78664813208e39e9473ad49c80bc3a38509",
+    "sim/test_agentcard_replay.py": "18663f9e436187412595ff881317741d871dc52e664a6898651df7d1a4d5cdbb"
+  },
+  "units": {
+    "bandwidth": "bytes/ns (1 = 1 decimal GB/s)",
+    "bytes": "bytes",
+    "capacity": "GiB = 2^30 bytes",
+    "time": "ns"
+  }
+}
